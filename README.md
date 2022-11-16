@@ -1,4 +1,5 @@
 # salut 
 helo hay dont spik angliche veri well
-*italique* 
-**gras** 
+
+## *hay can write in italike* 
+**gras** g
