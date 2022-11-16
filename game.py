@@ -8,4 +8,4 @@ pygame.display.set_caption("jeu")
 
 state = True 
 while state: 
-	pygame.display.update
+	pygame.display.update()
