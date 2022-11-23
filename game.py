@@ -10,6 +10,9 @@ pygame.display.set_caption("jeu")
 programIcon = pygame.image.load('Userbox_creeper.ico')
 pygame.display.set_icon(programIcon)
 
+bg = pygame.image.load("python.png")
+pygame.display.blit(bg, (400, 400))
+
 
 
 state = True 
