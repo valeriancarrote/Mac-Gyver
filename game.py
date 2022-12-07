@@ -20,7 +20,7 @@ bg = pygame.transform.scale(bg,(800, 400))
 
 player = pygame.image.load("image/Player.png").convert_alpha()
 
-player = pygame.transform.scale(player,(100, 100))
+player = pygame.transform.scale(player,(50, 50))
 
 
 
@@ -45,9 +45,15 @@ while state:
 		hey = 2
 		if hey == 2:
 			x -= 5 
-	if x == 400:
-		print("nan")
-	
+
+
+	if x in [390,380,370,360,350,340,330,320,310,300,290,280,270,260,250,240,230,220,210,200,190,180,170,160,150,140]:
+		if y == 180: 
+			print("svpcamarche")
+			y +=10
+
+    
+
 
 	win.blit(player, (x, y))
 	pygame.display.update() 
@@ -73,8 +79,9 @@ while state:
 				#print("BAS")
 				y +=10
 			if event.key == pygame.K_SPACE: 
-				print("x est égal a" + x)
-				print("y est égal a" + y)
+				print(x)
+				print(y)
+			
 	
 	
 	pygame.display.flip()
