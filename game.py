@@ -33,6 +33,7 @@ state = 1
 x = 0
 y = 0 
 hey = 1
+cordonner = True
 
 while state: 
 
@@ -44,13 +45,15 @@ while state:
 		hey = 2
 		if hey == 2:
 			x -= 5 
-
-
+	if x == 400:
+		print("nan")
+	
 
 	win.blit(player, (x, y))
 	pygame.display.update() 
 	pygame.time.Clock().tick(30)
 	win.blit(bg, (0, 0))
+
 
 	
 	for event in pygame.event.get():
@@ -58,17 +61,20 @@ while state:
 			state = False
 		if event.type == pygame.KEYDOWN: 
 			if event.key == pygame.K_LEFT: 
-				print("gauche")
+				#print("gauche")
 				x -=10
 			if event.key == pygame.K_RIGHT: 
-				print("droite")
+				#print("droite")
 				x +=10
 			if event.key == pygame.K_UP: 
-				print("HAUT")
+				#print("HAUT")
 				y -=10
 			if event.key == pygame.K_DOWN: 
-				print("BAS")
+				#print("BAS")
 				y +=10
+			if event.key == pygame.K_SPACE: 
+				print("x est égal a" + x)
+				print("y est égal a" + y)
 	
 	
 	pygame.display.flip()
