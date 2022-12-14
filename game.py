@@ -47,10 +47,34 @@ while state:
 			x -= 5 
 
 
-	if x in [390,380,370,360,350,340,330,320,310,300,290,280,270,260,250,240,230,220,210,200,190,180,170,160,150,140]:
-		if y == 180: 
-			print("svpcamarche")
+	if x in [390,380,370,360,350,340,330,320,310,300,290,280,270,260,250,240,230,220,210,200,190,180,170,160,150,]:
+		if y in [180,190]:  
+			print("REDIRIGER EN BAS sur l'orizontal")
 			y +=10
+	if x in [140,150,160,170,180,190,200,210,220,230,240,250,260,270,400,410,420,430,440,450,460,470,480,490,500]:
+		if y in [260,240]:  
+			print("CAS special ")
+			y +=10
+	if x in [490,480,470]:
+		if y in [150]:  
+			print("38ème cas spéciale")
+			y -=10 
+	if x in [120,130,140,150,160,170,180,190,200,210]:
+		if y in [60]:  
+			print("2ème cas spésial ")
+			y -=10
+	if x in [400,140,150,160,170,180,190,200,210,220,230,240,250,260,270,290]:
+		if y in [210]:  
+			print("REDIRIGER EN HAUT sur l'orizontal")
+			y -=10
+	if x in [460,460]:
+		if y in [230,220,210,200,190,180,170,160,150,140,130,120,110,100,90,80]:  
+			print("rediriger VER la gauche sur la vertical ")
+			x +=10
+	if x in [110,220]:
+		if y in [230,220,210,200,190,180,170,160,150,140,130,120,110,100,90,80,70,60]:  
+			print("rediriger vers la droite sur la vertical")
+			x -=10
 
     
 
@@ -84,8 +108,6 @@ while state:
 			
 	
 	
-	pygame.display.flip()
-
 
 
 pygame.quit()
